@@ -354,7 +354,7 @@ const menuData = ref([
       },
       {
         id: 2,
-        name: '喜姐掌中宝',
+        name: '掌中宝',
         desc: '嘎嘣脆 鸡肉味',
         price: 15,
         sales: 856,
@@ -1063,7 +1063,7 @@ onMounted(() => {
 </script>
 
 <style lang="scss" scoped>
-/* 全局变量：喜姐炸串品牌色 */
+/* 全局变量：炸串品牌色 */
 $primary-red: #e6212a;
 $light-bg: #f7f8fa;
 $text-main: #333;

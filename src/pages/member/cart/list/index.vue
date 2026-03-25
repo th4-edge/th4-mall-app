@@ -9,7 +9,7 @@
         <view v-for="item in cartItems" :key="item.id" class="popup-item">
           <view class="item-info">
             <text class="item-name">{{ item.data.name }}</text>
-            <text v-if="item.sku" class="item-spec">{{ item.sku }}</text>
+            <text v-if="item.options" class="item-spec">{{ Object.values(item.options).join(';') }}</text>
 <!--            <text v-if="item.isCombo" class="combo-tag">组合商品</text>-->
           </view>
           <view class="item-control">
@@ -45,7 +45,16 @@ const cartItemMinus=(cartItem:mall.CartItem,num:number)=>{
 }
 
 const clear=()=>{
-  props.cart.clear();
+  uni.showModal({
+    title: '提示',
+    content: '确定清空购物车吗？',
+    success: (res) => {
+      if (res.confirm) {
+        props.cart.clear();
+      }
+    }
+  });
+
 }
 const close=()=>{
   visible.value=false;
@@ -66,6 +75,14 @@ watch(()=>visible.value,(visible)=>{
 })
 </script>
 <style scoped lang="scss">
+$primary-red: #e6212a;
+$light-bg: #f7f8fa;
+$text-main: #333;
+$text-sub: #999;
+$border-color: #eee;
+$disabled-color: #ccc;
+$special-yellow: #ff9900;
+$combo-purple: #9933ff;
 .cart-popup-mask {
   position: fixed;
   top: 0;

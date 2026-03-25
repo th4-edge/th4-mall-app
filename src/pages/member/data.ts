@@ -19,7 +19,7 @@ export const  menuData = ref([
             },
             {
                 id: 2,
-                name: '喜姐掌中宝',
+                name: '掌中宝',
                 desc: '嘎嘣脆 鸡肉味',
                 price: 15,
                 sales: 856,

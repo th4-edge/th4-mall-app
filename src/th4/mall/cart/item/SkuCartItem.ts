@@ -8,6 +8,11 @@ import {cartItemFactory} from "@/th4/mall/cart/factory/CartItemFactory";
 @Register<mall.CartItem>(cartItemFactory, (data: any,options: any) =>options,1)
 export class SkuCartItem extends ICartItem {
 
+    /**
+     * 商品规格
+     * @type {any}
+     * @protected
+     */
     protected _sku: any;
 
     constructor(data: any, options?: any) {
@@ -17,8 +22,5 @@ export class SkuCartItem extends ICartItem {
 
     match(goodsItem: any, options?: any): boolean {
         return super.match(goodsItem, options)&&options&&JSON.stringify(options)===JSON.stringify(this._sku);
-    }
-    get sku(): any {
-        return Object.values(this._sku).join(";");
     }
 }
