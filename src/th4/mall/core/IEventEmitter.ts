@@ -22,7 +22,7 @@ export class IEventEmitter extends ITrace implements mall.EventEmitter {
         if (this._listeners[event]) {
             this._listeners[event].forEach(listener => {
                 try{
-                    listener(args);
+                    listener(...args);
                 }catch (e){
                     this._logger.error(e);
                 }

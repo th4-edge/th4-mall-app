@@ -91,4 +91,7 @@ export class IComponent extends IEventEmitter implements mall.Component {
     get data(): any {
         return this._data;
     }
+    get options(): any {
+        return this._options;
+    }
 }

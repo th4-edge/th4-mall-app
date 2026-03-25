@@ -1,6 +1,7 @@
 {
   "extends": "@vue/tsconfig/tsconfig.json",
   "compilerOptions": {
+    "experimentalDecorators": true,
     "sourceMap": true,
     "baseUrl": ".",
     "paths": {

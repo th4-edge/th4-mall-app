@@ -31,7 +31,6 @@
         "navigationBarBackgroundColor": "#fff",
         "navigationBarTextStyle": "black",
         "enablePullDownRefresh": true,
-        "navigationStyle": "custom",
         "mp-alipay": {
           "transparentTitle": "always",
           "allowsBounceVertical": "YES"

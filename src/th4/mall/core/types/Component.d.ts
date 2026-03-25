@@ -27,6 +27,11 @@ namespace mall {
         get data(): any;
 
         /**
+         * 组件配置项
+         */
+        get options(): any;
+
+        /**
          * 初始化
          */
         init?(): void;
